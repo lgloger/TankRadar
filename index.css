@@ -57,6 +57,41 @@ body {
 }
 
 #map {
-    height: 100vh;
-    width: 100%;
+  width: 100%;
+  height: 100vh;
+}
+
+.navBar {
+  width: 100%;
+  height: 55px;
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  gap: 8px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.glassEffect {
+  --webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  background-color: var(--glass-effect-color);
+  border-radius: 32px;
+  box-shadow: inset 0 0 1px var(--glass-effect-box-shadow);
+}
+
+.searchBar {
+  max-width: 230px;
+  width: 100%;
+  height: 100%;
+  pointer-events: all;
+}
+
+.locationBtnCon {
+  width: 55px;
+  height: 55px;
+  pointer-events: all;
 }
