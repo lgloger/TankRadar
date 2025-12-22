@@ -56,7 +56,7 @@ async function initMap() {
 
   for (let ind = 0; ind < markerList.length; ++ind) {
     const element = markerList[ind];
-    console.log(element);
+    // console.log(element); // Debug
 
     let markerLat = element.lat;
     let markerLng = element.lng;

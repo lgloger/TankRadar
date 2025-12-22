@@ -69,7 +69,7 @@ body {
   box-shadow: inset 0 0 1px var(--glass-effect-box-shadow);
 }
 
-/* ====== Location Btn ====== */
+/* ====== SideBar Btn ====== */
 
 .BtnCon {
   height: auto;
@@ -85,7 +85,7 @@ body {
   z-index: 9999;
 }
 
-.getUserLocationBtn {
+.sideBarBtn {
   width: 55px;
   height: 55px;
   display: flex;
