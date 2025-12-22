@@ -1,5 +1,5 @@
 export async function loadStations(lat, lng) {
-  const WORKER_URL = "https://worker-api.luca-kloger.workers.dev/";
+  const WORKER_URL = env.WORKER_URL;
 
   try {
     const res = await fetch(`${WORKER_URL}?lat=${lat}&lng=${lng}&rad=5`);
