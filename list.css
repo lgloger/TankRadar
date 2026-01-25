@@ -153,7 +153,7 @@ body {
 .gasStationHeader {
   color: var(--primary-text-color);
   font-size: 17px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .gasStationItemTextCon {
@@ -171,6 +171,10 @@ body {
   color: var(--primary-text-color);
   font-size: 17px;
   font-weight: 400;
+}
+
+.gasStationTextType {
+  font-weight: 600;
 }
 
 .gasStationLocation {

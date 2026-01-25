@@ -19,11 +19,10 @@ const gasStationList = await loadStations(lat, lng);
 
 for (let ind = 0; ind < gasStationList.length; ++ind) {
   const element = gasStationList[ind];
-  console.log(element); // Debug
 
   function formatPrice(value) {
     if (value === null || value === 0) {
-        return "N/A";
+      return "N/A";
     }
 
     return value.toString().slice(0, -1);
@@ -49,9 +48,9 @@ for (let ind = 0; ind < gasStationList.length; ++ind) {
             <span class="gasStationHeader">${gasStationName}</span>
           </div>
           <div class="gasStationItemTextCon">
-            <span class="gasStationText">Diesel: ${gasStationDiesel} €</span>
-            <span class="gasStationText">E5: ${gasStationE5} €</span>
-            <span class="gasStationText">E10: ${gasStationE10} €</span>
+            <span class="gasStationText"><span class="gasStationTextType">Diesel: </span>${gasStationDiesel} €</span>
+            <span class="gasStationText"><span class="gasStationTextType">E5: </span>${gasStationE5} €</span>
+            <span class="gasStationText"><span class="gasStationTextType">E10: </span>${gasStationE10} €</span>
           </div>
           <a href="https://maps.google.com/?q=${gasStationLocationName}" class="gasStationLocation">${gasStationLocationName}</a>
         </div>`;
