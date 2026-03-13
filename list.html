@@ -1,42 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TankRadar - Tankstellen in deiner Nähe</title>
     <link rel="shortcut icon" href="assets/favIcon.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="styles/globals.css" />
     <link rel="stylesheet" href="list.css" />
-    <script type="module" src="getData.js" defer></script>
+
     <script type="module" src="list.js" defer></script>
   </head>
   <body>
-    <div class="BtnCon">
-      <a
-        id="showAllLocationsBtn"
-        class="sideBarBtn glassEffect"
-        title="Karte"
-        href="index.html"
-      >
-        <svg
-          class="btnIcon"
-          viewBox="0 -960 960 960"
-          xmlns="http://www.w3.org/2000/svg"
-          xml:space="preserve"
-          xmlns:serif="http://www.serif.com/"
-          style="
-            fill-rule: evenodd;
-            clip-rule: evenodd;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke-miterlimit: 1.5;
-          "
-        >
-          <path
-            d="M570.41-121.83 360-195.63l-186.48 72.48q-11.43 4.48-22.25 2.86-10.81-1.62-19.77-7.34-8.96-5.72-14.29-15.41-5.34-9.7-5.34-22.13V-730q0-15.63 9.05-27.78 9.06-12.15 24.45-17.87l185.04-62.52q6.96-2.24 14.3-3.48 7.33-1.24 15.29-1.24 7.96 0 15.29 1.12 7.34 1.12 14.3 3.6L600-764.37l186.48-72.48q11.43-4.48 22.25-2.86 10.81 1.62 19.77 7.34 8.96 5.72 14.29 15.41 5.34 9.7 5.34 22.13V-230q0 15.63-9.05 27.78-9.06 12.15-24.45 17.87l-185.04 62.52q-6.96 2.24-14.3 3.48-7.33 1.24-15.29 1.24-7.96 0-15.29-1.12-7.34-1.12-14.3-3.6ZM560-221.35v-461.3l-160-56v461.3l160 56Z"
-          />
-        </svg>
-      </a>
-    </div>
+    <header>
+      <div class="headerBtnContainer blurEffect">
+        <a class="headerBtn blurEffect" title="Karte" href="index.html">
+          <svg
+            class="headerBtnIcon"
+            viewBox="0 -960 960 960"
+            xmlns="http://www.w3.org/2000/svg"
+            xml:space="preserve"
+            xmlns:serif="http://www.serif.com/"
+            style="
+              fill-rule: evenodd;
+              clip-rule: evenodd;
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              stroke-miterlimit: 1.5;
+            "
+          >
+            <path
+              d="M570.41-121.83 360-195.63l-186.48 72.48q-11.43 4.48-22.25 2.86-10.81-1.62-19.77-7.34-8.96-5.72-14.29-15.41-5.34-9.7-5.34-22.13V-730q0-15.63 9.05-27.78 9.06-12.15 24.45-17.87l185.04-62.52q6.96-2.24 14.3-3.48 7.33-1.24 15.29-1.24 7.96 0 15.29 1.12 7.34 1.12 14.3 3.6L600-764.37l186.48-72.48q11.43-4.48 22.25-2.86 10.81 1.62 19.77 7.34 8.96 5.72 14.29 15.41 5.34 9.7 5.34 22.13V-230q0 15.63-9.05 27.78-9.06 12.15-24.45 17.87l-185.04 62.52q-6.96 2.24-14.3 3.48-7.33 1.24-15.29 1.24-7.96 0-15.29-1.12-7.34-1.12-14.3-3.6ZM560-221.35v-461.3l-160-56v461.3l160 56Z"
+            />
+          </svg>
+        </a>
+      </div>
+    </header>
     <div class="gasStationList">
       <h1 class="gasStationHeaderText">Tankstellen in deiner Nähe</h1>
       <div class="gasStationItemList" id="gasStationItemList"></div>
@@ -44,7 +43,9 @@
     <div class="footer">
       <div class="firstFooterSec">
         <span class="footerHeader">Rechtliches</span>
-        <a class="footerText" href="https://lucagloger.pages.dev/impressum">Impressum</a>
+        <a class="footerText" href="https://lucagloger.pages.dev/impressum"
+          >Impressum</a
+        >
       </div>
       <div class="lastFooterSec">
         <span class="footerTextTwo"

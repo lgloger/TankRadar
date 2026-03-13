@@ -1,19 +1,10 @@
+import { getCurrentLocation } from "./getLocation.js";
 import { loadStations } from "./getData.js";
 
 let map;
 
-// Get User Location
-async function getLocation() {
-  const position = await new Promise((resolve, reject) => {
-    navigator.geolocation.getCurrentPosition(resolve, reject);
-  });
-
-  const lat = position.coords.latitude;
-  const lng = position.coords.longitude;
-
-  return { lat, lng };
-}
-const { lat, lng } = await getLocation();
+// ====== Get Location ======
+const { lat, lng } = await getCurrentLocation();
 
 // Map
 async function initMap() {
@@ -34,13 +25,11 @@ async function initMap() {
     popupAnchor: [12.5, -3],
   });
 
-  // ====== Get Location ======
-
   // ====== Map ======
   map = L.map("map", { zoomControl: false }).setView([lat, lng], 15);
 
   // OSM Layer
-  var osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  var osm = L.tileLayer("https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.jpg", {
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   });
@@ -56,7 +45,6 @@ async function initMap() {
 
   for (let ind = 0; ind < markerList.length; ++ind) {
     const element = markerList[ind];
-    // console.log(element); // Debug
 
     let markerLat = element.lat;
     let markerLng = element.lng;
@@ -66,23 +54,10 @@ async function initMap() {
     var marker = L.marker([markerLat, markerLng], { icon: gasStationIcon });
     marker.addTo(map);
     var popup = marker.bindPopup(
-      `${markerName} - €${markerDieselPrice} Diesel`
+      `${markerName} - €${markerDieselPrice} Diesel`,
     );
     popup.addTo(map);
   }
-
-  // Tile Layer
-  var Stadia_AlidadeSmoothDark = L.tileLayer(
-    "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}",
-    {
-      minZoom: 0,
-      maxZoom: 20,
-      attribution:
-        '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      ext: "png",
-    }
-  );
-  Stadia_AlidadeSmoothDark.addTo(map);
 }
 
 initMap();

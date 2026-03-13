@@ -1,20 +1,10 @@
+import { getCurrentLocation } from "./getLocation.js";
 import { loadStations } from "./getData.js";
 
-// Get User Location
-async function getLocation() {
-  const position = await new Promise((resolve, reject) => {
-    navigator.geolocation.getCurrentPosition(resolve, reject);
-  });
-
-  const lat = position.coords.latitude;
-  const lng = position.coords.longitude;
-
-  return { lat, lng };
-}
-const { lat, lng } = await getLocation();
+const { lat, lng } = await getCurrentLocation();
+console.log(lat, lng); // Debug
 
 // List
-
 const gasStationList = await loadStations(lat, lng);
 
 for (let ind = 0; ind < gasStationList.length; ++ind) {

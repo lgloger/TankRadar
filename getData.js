@@ -5,7 +5,9 @@ export async function loadStations(lat, lng) {
     const res = await fetch(`${WORKER_URL}?lat=${lat}&lng=${lng}&rad=5`);
 
     const stations = await res.json();
-    
+
+    console.log(stations); // Debug
+
     return stations;
   } catch (err) {
     console.error(err);
