@@ -29,7 +29,7 @@ async function initMap() {
   map = L.map("map", { zoomControl: false }).setView([lat, lng], 15);
 
   // OSM Layer
-  var osm = L.tileLayer("https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.jpg", {
+  var osm = L.tileLayer("https://tile.openstreetmap.de/{z}/{x}/{y}.png", {
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   });
