@@ -8,11 +8,9 @@ export async function getCurrentLocation() {
     try {
       const [lat, lng, timestamp] = JSON.parse(storedLocation);
       if (Date.now() - timestamp < LOCALSTORAGE_DURATION) {
-        console.log("Used Local Store Location"); // Debug
         return { lat, lng };
       }
     } catch (e) {
-      console.log("Local Storage Error"); // Debug
     }
   }
 
@@ -27,7 +25,6 @@ export async function getCurrentLocation() {
     const timestamp = Date.now();
 
     localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify([lat, lng, timestamp]));
-    console.log("Local Storage Item set"); // Debug
 
     return { lat, lng };
   } catch (e) {

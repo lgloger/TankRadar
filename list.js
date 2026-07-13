@@ -2,7 +2,6 @@ import { getCurrentLocation } from "./getLocation.js";
 import { loadStations } from "./getData.js";
 
 const { lat, lng } = await getCurrentLocation();
-console.log(lat, lng); // Debug
 
 // List
 const gasStationList = await loadStations(lat, lng);
