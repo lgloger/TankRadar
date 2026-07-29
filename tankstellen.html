@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tankpreise & mehr: Tankstellen vergleichen – TankRadar</title>
+    <link
+      rel="shortcut icon"
+      href="assets/Icons/favicon.jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="styles/tankstellen.css" />
+    <link rel="shortcut icon" href="assets/favicon.jpg" type="image/x-icon">
+    <script type="module" src="scripts/dataManger.js" defer></script>
+    <script type="module" src="scripts/buttonListener.js" defer></script>
+    <script src="scripts/textAnimation.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="headerFirstCon">
+        <a class="buttonCon blurEffect" href="index.html">
+          <img
+            src="assets/icons/water.svg"
+            alt="TankRadar"
+            class="buttonConIcon"
+          />
+        </a>
+        <div class="buttonListCon blurEffect">
+          <a class="buttonCon" href="index.html" title="Karte">
+            <img src="assets/icons/map.svg" alt="Karte" class="buttonConIcon" />
+          </a>
+          <a class="buttonCon" href="https://lucagloger.pages.dev/impressum">
+            <img
+              src="assets/icons/info.svg"
+              alt="Impressum"
+              class="buttonConIcon"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="headerSecondCon">
+        <div class="buttonListCon blurEffect">
+          <input
+            type="text"
+            placeholder="Postleitzahl"
+            id="headerSearchInput"
+          />
+          <button class="buttonCon" id="headerSearchBtn">
+            <img
+              src="assets/icons/search.svg"
+              alt="Suchen"
+              class="buttonConIcon"
+            />
+          </button>
+        </div>
+        <button class="buttonCon blurEffect" id="getLocationBtn">
+          <img
+            src="assets/icons/location.svg"
+            alt="Standort"
+            class="buttonConIcon"
+          />
+        </button>
+      </div>
+    </header>
+    <main>
+      <div class="firstMainSec">
+        <span class="firstMainHeader"
+          >Tankstellen in
+          <span id="locationText">der Stadt Musterstadt</span></span
+        >
+        <div class="firstMainPickCon">
+          <select name="fuelType" class="firstMainSelect" id="fuelTypeValue">
+            <option value="diesel">Diesel</option>
+            <option value="e5">E5</option>
+            <option value="e10">E10</option>
+          </select>
+          <select name="distance" class="firstMainSelect" id="distanceValue">
+            <option value="5">5 km</option>
+            <option value="10">10 km</option>
+            <option value="15">15 km</option>
+            <option value="20">20 km</option>
+            <option value="30">30 km</option>
+            <option value="50">50 km</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="mainSec">
+        <img
+          src="assets/loadingGifs/accordion-loader.gif"
+          alt="loading"
+          class="loadingAnimation"
+        />
+        <!-- <div class="mainSecItem blurEffect">
+          <div class="itemFirstCon">
+            <div class="itemPriceCon">
+              <div class="itemPriceConValueCon">
+                <span class="itemPriceConValueText">0,00</span>
+                <span class="itemPriceConValueSecText">9</span>
+              </div>
+              <img
+                src="assets/images/MTSK_S_logo.png"
+                alt="MTSK"
+                class="itemPriceConLogo"
+              />
+            </div>
+            <div class="itemFirstConInfoCon">
+              <span class="itemFirstConInfoConHeader">MUSTER</span>
+              <span class="itemFirstConInfoConDescription"
+                >Musterstraße 1 - 12345 Musterstadt</span
+              >
+              <a href="" class="itemFirstConInfoConLink"
+                >Navigieren mit Google Maps</a
+              >
+            </div>
+          </div>
+          <div class="itemSecCon">
+            <span class="itemSecConInfoText">Geöffnet</span>
+          </div>
+        </div> -->
+      </div>
+    </main>
+    <footer>
+      <div class="footerLinkListSec">
+        <div class="footerLinkCon">
+          <div class="footerlinkCategoryCon">
+            <span class="footerLinkHeader">Noch mehr von @lucagloger</span>
+            <a href="https://lucagloger.pages.dev/" class="footerLink"
+              >lucagloger.pages.dev
+              <img
+                src="assets/icons/arrow.svg"
+                alt="link"
+                class="footerLinkIcon"
+            /></a>
+          </div>
+          <div class="footerlinkCategoryCon">
+            <span class="footerLinkHeader">Daten & API</span>
+            <a
+              href="https://creativecommons.tankerkoenig.de/"
+              class="footerLink"
+              >Tankerkönig
+              <img
+                src="assets/icons/arrow.svg"
+                alt="link"
+                class="footerLinkIcon"
+            /></a>
+            <a href="https://nominatim.openstreetmap.org/" class="footerLink"
+              >Nominatim
+              <img
+                src="assets/icons/arrow.svg"
+                alt="link"
+                class="footerLinkIcon"
+            /></a>
+          </div>
+          <div class="footerlinkCategoryCon">
+            <span class="footerLinkHeader">Rechtliches</span>
+            <a href="" class="footerLink">Impressum</a>
+          </div>
+        </div>
+        <img
+          src="assets/images/MTSK_L_logo.png.png"
+          alt="MTSK"
+          class="footerImage"
+        />
+      </div>
+      <div class="footerCopyrightSec">
+        <span id="footerCopyrightText"
+          >Copyright © 2026 Luca Gloger. Alle Rechte vorbehalten.</span
+        >
+        <div class="socialLinkCon">
+          <a href="https://github.com/lgloger" class="socialLink">
+            <img
+              src="assets/icons/github.svg"
+              alt="github"
+              class="socialLinkIcon"
+            />
+          </a>
+          <a href="https://x.com/luca_gloger" class="socialLink">
+            <img
+              src="assets/icons/twitter.svg"
+              alt="twitter"
+              class="socialLinkIcon"
+            />
+          </a>
+          <a href="https://www.instagram.com/luca.gloger1/" class="socialLink">
+            <img
+              src="assets/icons/instagram.svg"
+              alt="instagram"
+              class="socialLinkIcon"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <div class="firstOverlay"></div>
+    <div class="secOverlay"></div>
+  </body>
+</html>
