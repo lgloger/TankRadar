@@ -162,7 +162,7 @@
       </div>
       <div class="footerCopyrightSec">
         <span id="footerCopyrightText"
-          >Copyright © 2026 Luca Gloger. Alle Rechte vorbehalten.</span
+          >Copyright © <span id="copyrightYear"></span> Luca Gloger. Alle Rechte vorbehalten.</span
         >
         <div class="socialLinkCon">
           <a href="https://github.com/lgloger" class="socialLink">
@@ -192,4 +192,8 @@
     <div class="firstOverlay"></div>
     <div class="secOverlay"></div>
   </body>
+
+  <script>
+    document.getElementById("copyrightYear").textContent = new Date().getFullYear();
+  </script>
 </html>

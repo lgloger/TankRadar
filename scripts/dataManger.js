@@ -1,6 +1,4 @@
-let lat = 52.5173885;
-let lng = 13.3951309;
-let rad = 5;
+import { lastLat, lastLng, lastLocationName } from "./locationManger.js";
 
 const listCon = document.getElementById("mainSec");
 
@@ -107,4 +105,4 @@ function formatSecondPrice(value) {
   return value.toString().slice(-1);
 }
 
-getStations(lat, lng, rad, "der Stadt Berlin", "diesel");
+getStations(lastLat, lastLng, 5, lastLocationName, "diesel");

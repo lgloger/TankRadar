@@ -1,3 +1,7 @@
+export let lastLat = 52.5173885;
+export let lastLng = 13.3951309;
+export let lastLocationName = "der Stadt Berlin";
+
 export async function getUserLocation() {
   try {
     const position = await new Promise((resolve, reject) => {
@@ -6,8 +10,12 @@ export async function getUserLocation() {
 
     const lat = position.coords.latitude;
     const lng = position.coords.longitude;
+    const locationName = "deiner Nähe";
+    lastLat = lat;
+    lastLng = lng;
+    lastLocationName = locationName;
 
-    return { lat, lng };
+    return { lat, lng, locationName };
   } catch (e) {
     console.log(`Location Error`);
     throw e;
@@ -43,6 +51,10 @@ export async function getSearchLocation(searchValue) {
   }
   const name = result[0].address[addressType];
   const locationName = `der Stadt ${name}`;
+
+  lastLat = lat;
+  lastLng = lng;
+  lastLocationName = locationName;
 
   return { lat, lng, locationName };
 }

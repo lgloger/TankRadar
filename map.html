@@ -16,7 +16,7 @@
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
       crossorigin=""
     ></script>
-    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/map.css" />
 
     <script type="module" src="scripts/map.js" defer></script>
@@ -33,7 +33,11 @@
         </a>
         <div class="buttonListCon blurEffect">
           <a class="buttonCon" href="tankstellen.html" title="Karte">
-            <img src="assets/icons/list.svg" alt="Liste" class="buttonConIcon" />
+            <img
+              src="assets/icons/list.svg"
+              alt="Liste"
+              class="buttonConIcon"
+            />
           </a>
           <a class="buttonCon" href="https://lucagloger.pages.dev/impressum">
             <img
@@ -45,6 +49,13 @@
         </div>
       </div>
     </header>
+    <main>
+      <img
+        src="assets/loadingGifs/accordion-loader.gif"
+        alt="loading"
+        class="loadingAnimation"
+      />
+    </main>
     <div id="map"></div>
     <div class="firstOverlay"></div>
   </body>

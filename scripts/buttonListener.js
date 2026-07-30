@@ -2,6 +2,8 @@ import { getUserLocation } from "./locationManger.js";
 import { getSearchLocation } from "./locationManger.js";
 import { getStations } from "./dataManger.js";
 
+import { lastLat, lastLng, lastLocationName } from "./locationManger.js";
+
 const fuelTypeSelect = document.getElementById("fuelTypeValue");
 const distanceSelect = document.getElementById("distanceValue");
 
@@ -25,7 +27,7 @@ const getLocationBtn = document
 
     let lat = location.lat;
     let lng = location.lng;
-    let locationName = "deiner Nähe";
+    let locationName = location.locationName;
 
     let fuelType = fuelTypeSelect.value;
     let radius = distanceSelect.value;
@@ -48,7 +50,7 @@ const headerSearchBtn = document
 
 async function inputSearch() {
   showLoading();
-  
+
   let searchValue = headerSearchInput.value;
   const location = await getSearchLocation(searchValue);
   let lat = location.lat;
@@ -59,4 +61,21 @@ async function inputSearch() {
   let radius = distanceSelect.value;
 
   getStations(lat, lng, radius, locationName, fuelType);
+}
+
+// Load when Filter Value changes
+fuelTypeSelect.addEventListener("change", () => {
+  searchFilter();
+});
+distanceSelect.addEventListener("change", () => {
+  searchFilter();
+});
+
+function searchFilter() {
+  showLoading();
+
+  let fuelType = fuelTypeSelect.value;
+  let radius = distanceSelect.value;
+
+  getStations(lastLat, lastLng, radius, lastLocationName, fuelType);
 }
