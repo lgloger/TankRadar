@@ -26,11 +26,10 @@ async function initMap() {
   map = L.map("map", { zoomControl: false }).setView([lat, lng], 15);
 
   var osm = L.tileLayer(
-    "https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.{ext}",
+    "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
     {
       attribution:
-        '&copy; CNES, Distribution Airbus DS, © Airbus DS, © PlanetObserver (Contains Copernicus Data) | &copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      ext: "jpg",
+        "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
     },
   );
 
@@ -54,7 +53,7 @@ async function initMap() {
     var marker = L.marker([markerLat, markerLng], { icon: gasStationIcon });
     marker.addTo(map);
     var popup = marker.bindPopup(
-      `${markerName} - €${markerDieselPrice} Diesel`,
+      `${markerName} - ${markerDieselPrice}€ Diesel`,
     );
     popup.addTo(map);
   }

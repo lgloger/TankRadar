@@ -24,16 +24,16 @@ export async function getUserLocation() {
 
 export async function getSearchLocation(searchValue) {
   // Production URL
-  //   const search = await fetch(
-  //     `https://nominatim.openstreetmap.org/search?q=${searchValue},+Germany&format=jsonv2&addressdetails=1`,
-  //   );
+    const search = await fetch(
+      `https://nominatim.openstreetmap.org/search?q=${searchValue},+Germany&format=jsonv2&addressdetails=1`,
+    );
 
   // Developement URL
-  const search = await fetch(
-    `https://corsproxy.io/?url=${encodeURIComponent(
-      `https://nominatim.openstreetmap.org/search?q=${searchValue},+Germany&format=jsonv2&addressdetails=1`,
-    )}`,
-  );
+  // const search = await fetch(
+  //   `https://corsproxy.io/?url=${encodeURIComponent(
+  //     `https://nominatim.openstreetmap.org/search?q=${searchValue},+Germany&format=jsonv2&addressdetails=1`,
+  //   )}`,
+  // );
 
   const result = await search.json();
   if (!result.length) {
