@@ -353,7 +353,7 @@ footer {
   width: 100%;
   height: auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
@@ -453,6 +453,7 @@ footer {
 @media only screen and (max-width: 1040px) {
   .footerLinkListSec {
     flex-direction: column;
+    align-items: center;
   }
   .footerLinkCon {
     flex-direction: column;
