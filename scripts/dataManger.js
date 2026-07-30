@@ -2,6 +2,8 @@ let lat = 52.5173885;
 let lng = 13.3951309;
 let rad = 5;
 
+const listCon = document.getElementById("mainSec");
+
 export async function getStations(
   latitude,
   longitude,
@@ -17,7 +19,11 @@ export async function getStations(
     );
 
     let result = await stations.json();
-    listStations(result, locationName, fuelType);
+    if (listCon) {
+      listStations(result, locationName, fuelType);
+    } else {
+      return result;
+    }
   } catch (e) {
     throw e;
   }
@@ -26,7 +32,6 @@ export async function getStations(
 function listStations(data, locationName, fuelType) {
   const locationText = document.getElementById("locationText");
   locationText.textContent = locationName;
-  const listCon = document.getElementById("mainSec");
   listCon.innerHTML = "";
 
   listCon.innerHTML += `

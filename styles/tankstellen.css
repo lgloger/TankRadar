@@ -89,75 +89,6 @@ body {
   font-family: "OpenRunde", sans-serif;
 }
 
-header {
-  height: auto;
-  width: 100%;
-  position: fixed;
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: transparent;
-  box-sizing: border-box;
-  padding: 30px;
-}
-
-.headerFirstCon {
-  width: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
-
-.buttonCon {
-  height: 56px;
-  width: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-}
-
-.buttonConIcon {
-  width: 24px;
-  height: 24px;
-}
-
-.buttonListCon {
-  height: 56px;
-  width: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.headerSecondCon {
-  width: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
-
-#headerSearchInput {
-  height: 24px;
-  width: 90px;
-  background-color: transparent;
-  font-family: "OpenRunde", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--primary-text-color);
-  border: none;
-  margin-left: 16px;
-}
-
-#headerSearchInput::placeholder {
-  color: var(--primary-text-color);
-}
-
 .blurEffect {
   border-radius: 32px;
   background-color: rgba(42, 42, 45, 0.6216);
@@ -565,36 +496,6 @@ footer {
     flex-direction: column-reverse;
     padding: 50px 0;
     gap: 22px;
-  }
-}
-
-@media only screen and (max-width: 740px) {
-  .headerFirstCon {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .headerSecondCon {
-    position: fixed;
-    bottom: 30px;
-    left: 30px;
-    width: calc(100% - 60px);
-    justify-content: flex-start;
-  }
-
-  .headerSecondCon .buttonListCon {
-    flex: 1;
-    min-width: 0;
-  }
-
-  #headerSearchInput {
-    flex: 1;
-    width: auto;
-    min-width: 0;
-  }
-
-  .secOverlay {
-    display: block;
   }
 }
 

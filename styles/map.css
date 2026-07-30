@@ -1,0 +1,39 @@
+:root {
+  --primary-backround-color: #101014;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+input,
+button,
+textarea,
+select,
+label,
+a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: auto;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-backround-color);
+  padding-top: 0;
+  font-family: "OpenRunde", sans-serif;
+}
+
+#map {
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}

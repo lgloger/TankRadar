@@ -1,16 +1,14 @@
-import { getCurrentLocation } from "./getLocation.js";
-import { loadStations } from "./getData.js";
+import { getUserLocation } from "./locationManger.js";
+import { getStations } from "./dataManger.js";
 
 let map;
 
-// ====== Get Location ======
-const { lat, lng } = await getCurrentLocation();
+// Get Location
+const { lat, lng } = await getUserLocation();
 
-// Map
 async function initMap() {
-  // === Icons ===
   var gasStationIcon = L.icon({
-    iconUrl: "/assets/icons/orange_dot.png",
+    iconUrl: "/assets/icons/gasStation_dot.png",
 
     iconSize: [22.5, 22.5],
     iconAnchor: [0, 0],
@@ -18,21 +16,23 @@ async function initMap() {
   });
 
   var userLocationIcon = L.icon({
-    iconUrl: "/assets/icons/blue_dot.png",
+    iconUrl: "/assets/icons/location_dot.png",
 
     iconSize: [22.5, 22.5],
     iconAnchor: [0, 0],
     popupAnchor: [12.5, -3],
   });
 
-  // ====== Map ======
   map = L.map("map", { zoomControl: false }).setView([lat, lng], 15);
 
-  // OSM Layer
-  var osm = L.tileLayer("https://tile.openstreetmap.de/{z}/{x}/{y}.png", {
-    attribution:
-      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-  });
+  var osm = L.tileLayer(
+    "https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.{ext}",
+    {
+      attribution:
+        '&copy; CNES, Distribution Airbus DS, © Airbus DS, © PlanetObserver (Contains Copernicus Data) | &copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      ext: "jpg",
+    },
+  );
 
   osm.addTo(map);
 
@@ -41,7 +41,7 @@ async function initMap() {
   userLocation.addTo(map);
 
   // Set Markers
-  const markerList = await loadStations(lat, lng);
+  const markerList = await getStations(lat, lng, 10, false, false);
 
   for (let ind = 0; ind < markerList.length; ++ind) {
     const element = markerList[ind];
@@ -61,17 +61,3 @@ async function initMap() {
 }
 
 initMap();
-
-// ====== FlyTo User Location ======
-
-const getUserLocationBtn = document.getElementById("getUserLocationBtn");
-getUserLocationBtn.addEventListener("click", flytoUserLocation);
-
-function flytoUserLocation() {
-  if (!map) return;
-
-  map.flyTo([lat, lng], 15, {
-    animate: true,
-    duration: 1,
-  });
-}
