@@ -49,7 +49,7 @@ async function initMap() {
     let markerLng = element.lng;
     let markerName = element.brand;
     let markerDieselPrice = element.diesel;
-
+ 
     var marker = L.marker([markerLat, markerLng], { icon: gasStationIcon });
     marker.addTo(map);
     var popup = marker.bindPopup(

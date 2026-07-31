@@ -335,140 +335,41 @@ main {
   color: #d90000;
 }
 
-/* ====== Footer ====== */
-footer {
+.infoContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 1040px;
-  height: auto;
-  margin-top: 180px;
+  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.65);
+  /* --webkit-backdrop-filter: var(--backdrop-filter-blur);
+  backdrop-filter: var(--backdrop-filter-blur); */
+  z-index: 1000;
+}
+
+.infoContentCon {
+  max-width: 625px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: column;
-  padding: 0 30px;
+  padding: 20px;
   box-sizing: border-box;
 }
 
-.footerLinkListSec {
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.footerLinkCon {
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 70px;
-}
-
-.footerlinkCategoryCon {
-  width: auto;
-  height: auto;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-}
-
-.footerLinkHeader {
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--primary-text-color);
-  padding-bottom: 15px;
-}
-
-.footerLink {
-  font-size: 16px;
-  font-weight: 400;
-  color: #7e7e7e;
-  text-decoration: none;
-  margin-top: 10px;
-  transition: color 0.15s ease-in-out;
-}
-
-.footerLink:hover {
-  color: #a8a8a8;
-}
-
-.footerLinkIcon {
-  width: 17px;
-  height: 17px;
-  margin-left: -3px;
-}
-
-.footerImage {
-  width: 253px;
-  height: 92px;
-}
-
-.footerCopyrightSec {
+.infoContentConHeader {
   width: 100%;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 70px 0 45px 0;
+  background-color: #fa3c00;
 }
-
-#footerCopyrightText {
-  font-size: 16px;
-  font-weight: 400;
-  color: #7e7e7e;
-  text-align: center;
-}
-
-.socialLinkCon {
-  width: auto;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-}
-
-.socialLink {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  border-radius: 6px;
-  padding: 3px;
-  transition: background-color 0.15s ease-in-out;
-}
-
-.socialLink:hover {
-  background-color: rgb(27, 27, 27);
-}
-
-.socialLinkIcon {
-  width: 24px;
-  height: 24px;
-}
-
-@media only screen and (max-width: 1040px) {
-  .footerLinkListSec {
-    flex-direction: column;
-    align-items: center;
-  }
-  .footerLinkCon {
-    flex-direction: column;
-    gap: 50px;
-  }
-  .footerImage {
-    margin-top: 50px;
-  }
-  .footerCopyrightSec {
-    flex-direction: column-reverse;
-    padding: 50px 0;
-    gap: 22px;
-  }
-}
-
 @media only screen and (max-width: 740px) {
   footer {
     padding-bottom: 65px;
