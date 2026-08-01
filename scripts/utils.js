@@ -30,4 +30,21 @@ function typeEffect() {
   setTimeout(typeEffect, speed);
 }
 
+// Info Container
+const infoBtn = document.getElementById("infoBtn");
+const infoCloseBtn = document.getElementById("infoCloseBtn");
+
+function toggleInfoContainer() {
+  const infoContainer = document.querySelector(".infoContainer");
+  infoContainer.classList.toggle("hideInfoContainer");
+}
+
+infoBtn.addEventListener("click", () => {
+  toggleInfoContainer();
+});
+
+infoCloseBtn.addEventListener("click", () => {
+  toggleInfoContainer();
+});
+
 typeEffect();

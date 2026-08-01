@@ -12,7 +12,7 @@
 
     <script type="module" src="scripts/dataManger.js" defer></script>
     <script type="module" src="scripts/buttonListener.js" defer></script>
-    <script src="scripts/textAnimation.js" defer></script>
+    <script src="scripts/utils.js" defer></script>
   </head>
   <body>
     <header>
@@ -28,7 +28,7 @@
           <a class="buttonCon" href="map.html" title="Karte">
             <img src="assets/icons/map.svg" alt="Karte" class="buttonConIcon" />
           </a>
-          <a
+          <button
             class="buttonCon"
             href="https://lucagloger.pages.dev/impressum"
             title="Preisinformationen"
@@ -40,7 +40,7 @@
               alt="Impressum"
               class="buttonConIcon"
             />
-          </a>
+          </button>
         </div>
       </div>
       <div class="headerSecondCon">
@@ -207,11 +207,17 @@
         </div>
       </div>
     </footer>
-    <div class="infoContainer">
+    <div class="infoContainer hideInfoContainer">
       <div class="infoContentCon blurEffect">
         <div class="infoContentConHeader">
           <span class="infoContentConHeaderText">Preise & Datenquelle</span>
-          <button class="infoContentConHeaderBtn"><img class="infoContentConHeaderIcon" src="assets/icons/close.svg" alt="close"></button>
+          <button class="infoContentConHeaderBtn" id="infoCloseBtn">
+            <img
+              class="infoContentConHeaderIcon"
+              src="assets/icons/close.svg"
+              alt="close"
+            />
+          </button>
         </div>
         <span class="infoContentConText"
           >Alle Preise ohne Gewähr – Datenquelle: Tankerkönig / MTS-K
