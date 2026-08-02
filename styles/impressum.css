@@ -107,6 +107,10 @@ main {
   font-weight: 600;
   color: var(--primary-text-color);
   margin-bottom: 40px;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  overflow-wrap: break-word;
 }
 
 .secHeaderSmall {
@@ -114,6 +118,10 @@ main {
   font-weight: 600;
   color: var(--primary-text-color);
   margin: 45px 0 25px 0;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  overflow-wrap: break-word;
 }
 
 .secText {
@@ -121,14 +129,26 @@ main {
   font-weight: 400;
   color: var(--primary-text-color);
   margin-bottom: 10px;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  overflow-wrap: break-word;
 }
 
 .secTextTel {
   color: var(--primary-text-color);
   text-decoration: none;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  overflow-wrap: break-word;
 }
 
 .secLink {
   color: var(--primary-text-color);
   text-decoration: underline;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  overflow-wrap: break-word;
 }
