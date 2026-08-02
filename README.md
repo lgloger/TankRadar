@@ -3,13 +3,13 @@ Eine Info-Website, die dir aktuelle Kraftstoffpreise in deiner Nähe oder für e
 
 `tankradar.pages.dev/tankstellen:`
 
-![Image](./assets/productImages/productImage_02.webp)
+![Image](./assets/productImages/productImage_02-1200w.webp)
 
 ### Vergleiche aktuelle Preise für Diesel, E5 und E10 direkt in deiner Umgebung. Suche flexibel über deinen Standort, den Stadtnamen oder die Postleitzahl und passe den Suchradius ganz nach deinen Wünschen an.
 
 `tankradar.pages.dev/map:`
 
-![Image](./assets/productImages/productImage_03.webp)
+![Image](./assets/productImages/productImage_03-1200w.webp)
 
 ### Behalte den Überblick dank der interaktiven Karte: Sieh dir alle verfügbaren Tankstellen im gewählten Umkreis direkt auf der Satelliten-Ansicht an und navigiere schnell zum günstigsten Preis.
 
