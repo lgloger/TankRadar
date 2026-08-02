@@ -81,11 +81,11 @@
     </header>
     <main>
       <div class="heroSection">
-        <h1 class="heroSectionHeader"
-          >Immer wissen, <br /><span class="heroSectionHeaderOrange"
+        <h1 class="heroSectionHeader">
+          Immer wissen, <br /><span class="heroSectionHeaderOrange"
             >wo's günstig ist.</span
-          ></h1
-        >
+          >
+        </h1>
         <span class="heroSectionDescription"
           >TankRadar zeigt dir Spritpreise in Echtzeit, als Liste oder auf der
           Karte. Basierend auf offiziellen Daten der Markttransparenzstelle für
@@ -106,9 +106,15 @@
           </div>
         </div>
         <img
-          src="assets/productImages/gasStationsExample.webp"
+          src="assets/productImages/gasStationsExample-800w.webp"
+          srcset="
+            assets/productImages/gasStationsExample-400w.webp 400w,
+            assets/productImages/gasStationsExample-800w.webp 800w
+          "
+          sizes="(min-width: 625px) 565px, calc(100vw - 60px)"
           alt="gasStationsExample"
           class="heroSectionImage"
+          fetchpriority="high"
         />
       </div>
       <div class="viewSection">
@@ -119,9 +125,17 @@
         <div class="viewSectionImageCon">
           <div class="viewSectionImageConFirst">
             <img
-              src="assets/productImages/productImage_02.webp"
+              src="assets/productImages/productImage_02-800w.webp"
+              srcset="
+                assets/productImages/productImage_02-400w.webp   400w,
+                assets/productImages/productImage_02-800w.webp   800w,
+                assets/productImages/productImage_02-1200w.webp 1200w
+              "
+              sizes="(min-width: 625px) 565px, calc(100vw - 60px)"
               alt="listViewExample"
               class="viewSectionImage"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div class="viewSectionImageConSecond">
@@ -137,9 +151,17 @@
         <div class="viewSectionImageCon">
           <div class="viewSectionImageConFirst">
             <img
-              src="assets/productImages/productImage_03.webp"
+              src="assets/productImages/productImage_03-800w.webp"
+              srcset="
+                assets/productImages/productImage_03-400w.webp   400w,
+                assets/productImages/productImage_03-800w.webp   800w,
+                assets/productImages/productImage_03-1200w.webp 1200w
+              "
+              sizes="(min-width: 625px) 565px, calc(100vw - 60px)"
               alt="listViewExample"
               class="viewSectionImage"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div class="viewSectionImageConSecond">
