@@ -2,6 +2,8 @@
   --primary-backround-color: #101014;
   --primary-text-color: #f5f5f7;
 
+  --brand-color: #fa3c00;
+
   --backdrop-filter-blur: blur(7px);
 }
 
@@ -153,7 +155,7 @@ main {
 }
 
 #locationText {
-  color: #fa3c00;
+  color: var(--brand-color);
 }
 
 .firstMainPickCon {
@@ -163,7 +165,6 @@ main {
   align-items: center;
   justify-content: flex-start;
   gap: 15px;
-  /* background-color: seagreen; */
 }
 
 .firstMainSelect {
