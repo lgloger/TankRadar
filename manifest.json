@@ -28,7 +28,7 @@
       "purpose": "maskable"
     }
   ],
-  "start_url": ".",
+  "start_url": "./tankstellen.html",
   "display": "standalone",
   "theme_color": "#101014",
   "background_color": "#101014"
