@@ -63,6 +63,7 @@
     <link rel="manifest" href="manifest.json" />
 
     <script type="module" src="scripts/map.js" defer></script>
+    <script src="scripts/utils.js" defer></script>
   </head>
   <body>
     <header>
@@ -82,13 +83,18 @@
               class="buttonConIcon"
             />
           </a>
-          <a class="buttonCon" href="https://lucagloger.pages.dev/impressum">
+          <button
+            class="buttonCon"
+            title="Preisinformationen"
+            aria-label="Preisinformationen"
+            id="infoBtn"
+          >
             <img
               src="assets/icons/info.svg"
               alt="Impressum"
               class="buttonConIcon"
             />
-          </a>
+          </button>
         </div>
       </div>
     </header>
@@ -99,6 +105,32 @@
         class="loadingAnimation"
       />
     </main>
+    <div class="infoContainer hideInfoContainer">
+      <div class="infoContentCon blurEffect">
+        <div class="infoContentConHeader">
+          <span class="infoContentConHeaderText">Preise & Datenquelle</span>
+          <button class="infoContentConHeaderBtn" id="infoCloseBtn">
+            <img
+              class="infoContentConHeaderIcon"
+              src="assets/icons/close.svg"
+              alt="close"
+            />
+          </button>
+        </div>
+        <span class="infoContentConText"
+          >Alle Preise ohne Gewähr – Datenquelle: Tankerkönig / MTS-K
+          (Bundeskartellamt). Für die Richtigkeit und Aktualität der Preise
+          übernehme ich keine Verantwortung, maßgeblich sind stets die vor Ort
+          ausgeschilderten Preise.</span
+        >
+        <span class="infoContentConText"
+          >Vollständiger Haftungsausschluss im
+          <a href="impressum.html" class="infoContentConTextLink"
+            >Impressum</a
+          ></span
+        >
+      </div>
+    </div>
     <div id="map"></div>
     <div class="firstOverlay"></div>
   </body>

@@ -47,4 +47,7 @@ infoCloseBtn.addEventListener("click", () => {
   toggleInfoContainer();
 });
 
-typeEffect();
+// Start Type Effect
+if (headerSearchInput) {
+  typeEffect();
+}
