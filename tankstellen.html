@@ -66,7 +66,7 @@
           />
         </a>
         <div class="buttonListCon blurEffect">
-          <a class="buttonCon" href="map.html" title="Karte">
+          <a class="buttonCon" href="map.html" title="Karte" aria-label="Karte">
             <img src="assets/icons/map.svg" alt="Karte" class="buttonConIcon" />
           </a>
           <button
@@ -75,11 +75,7 @@
             aria-label="Preisinformationen"
             id="infoBtn"
           >
-            <img
-              src="assets/icons/info.svg"
-              alt="Impressum"
-              class="buttonConIcon"
-            />
+            <img src="assets/icons/info.svg" alt="Info" class="buttonConIcon" />
           </button>
         </div>
       </div>
@@ -90,7 +86,12 @@
             placeholder="Postleitzahl"
             id="headerSearchInput"
           />
-          <button class="buttonCon" id="headerSearchBtn">
+          <button
+            class="buttonCon"
+            id="headerSearchBtn"
+            title="Suchen"
+            aria-label="Suchen"
+          >
             <img
               src="assets/icons/search.svg"
               alt="Suchen"
@@ -98,7 +99,12 @@
             />
           </button>
         </div>
-        <button class="buttonCon blurEffect" id="getLocationBtn">
+        <button
+          class="buttonCon blurEffect"
+          id="getLocationBtn"
+          title="Aktuellen Standort verwenden"
+          aria-label="Aktuellen Standort verwenden"
+        >
           <img
             src="assets/icons/location.svg"
             alt="Standort"
