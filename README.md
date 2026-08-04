@@ -12,6 +12,3 @@ Eine Info-Website, die dir aktuelle Kraftstoffpreise in deiner Nähe oder für e
 ![Image](./assets/productImages/productImage_03-1200w.webp)
 
 ### Behalte den Überblick dank der interaktiven Karte: Sieh dir alle verfügbaren Tankstellen im gewählten Umkreis direkt auf der Satelliten-Ansicht an und navigiere schnell zum günstigsten Preis.
-
-> [!NOTE]
-> Dir ist ein Fehler aufgefallen oder etwas funktioniert nicht wie erwartet? Hilf mit, TankRadar zu verbessern, und [erstelle ein Issue auf GitHub](https://github.com/lgloger/TankRadar/issues).
